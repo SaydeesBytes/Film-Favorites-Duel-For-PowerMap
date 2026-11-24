@@ -25,7 +25,9 @@ export type PosterMotif =
   | 'crazy-rich'
   | 'endgame'
   | 'guardians'
-  | 'no-way-home';
+  | 'no-way-home'
+  | 'harry-potter'
+  | 'jenifa';
 
 export type OutagePersonaId =
   | 'balcony-commander'
@@ -57,6 +59,7 @@ export interface FilmItem {
   category: FilmCategory;
   directorOrCreator: string;
   tagline: string;
+  posterUrl: string;
   motif: PosterMotif;
   palette: {
     bg: string;

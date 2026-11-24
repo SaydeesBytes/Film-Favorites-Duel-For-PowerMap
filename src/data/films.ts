@@ -170,6 +170,7 @@ export const FILMS: FilmItem[] = [
     category: 'Rom-Coms',
     directorOrCreator: 'Gil Junger',
     tagline: 'Bleacher serenades, paintball chaos, and sharp 90s wit.',
+    posterUrl: '/posters/ten-things.jpg',
     motif: 'ten-things',
     palette: {
       bg: '#FFE2EA',
@@ -189,6 +190,7 @@ export const FILMS: FilmItem[] = [
     category: 'Rom-Coms',
     directorOrCreator: 'Roger Michell',
     tagline: 'Blue doors, travel bookshops, and quiet rainy romance.',
+    posterUrl: '/posters/notting-hill.jpg',
     motif: 'notting-hill',
     palette: {
       bg: '#E3F1EE',
@@ -208,6 +210,7 @@ export const FILMS: FilmItem[] = [
     category: 'Rom-Coms',
     directorOrCreator: 'Donald Petrie',
     tagline: 'Yellow satin gowns, love ferns, and competitive flirting.',
+    posterUrl: '/posters/lose-a-guy.jpg',
     motif: 'lose-a-guy',
     palette: {
       bg: '#FFF3C4',
@@ -227,6 +230,7 @@ export const FILMS: FilmItem[] = [
     category: 'Rom-Coms',
     directorOrCreator: 'Jon M. Chu',
     tagline: 'Mahjong showdowns, garden weddings, and emerald glamour.',
+    posterUrl: '/posters/crazy-rich.png',
     motif: 'crazy-rich',
     palette: {
       bg: '#E2F3E9',
@@ -248,6 +252,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Nollywood',
     directorOrCreator: 'Kunle Afolayan / Heritage Classics',
     tagline: 'Velvet family secrets, parlour showdowns, and golden VCD era.',
+    posterUrl: '/posters/omotara-johnson.jpg',
     motif: 'omotara',
     palette: {
       bg: '#FCE8D5',
@@ -267,6 +272,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Nollywood',
     directorOrCreator: 'Chris Obi Rapu',
     tagline: 'The 1992 home-video revolution that started an era.',
+    posterUrl: '/posters/living-in-bondage.jpg',
     motif: 'living-in-bondage',
     palette: {
       bg: '#F3E3EC',
@@ -286,6 +292,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Nollywood',
     directorOrCreator: 'Kingsley Ogoro',
     tagline: 'Village swagger meets red double-decker buses.',
+    posterUrl: '/posters/osuofia-london.jpg',
     motif: 'osuofia',
     palette: {
       bg: '#FFE7DE',
@@ -305,6 +312,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Nollywood',
     directorOrCreator: 'Zeb Ejiro',
     tagline: '90s VHS mysticism, bold eyeliner, and timeless suspense.',
+    posterUrl: '/posters/nneka-serpent.jpg',
     motif: 'nneka',
     palette: {
       bg: '#E4F0E2',
@@ -317,6 +325,26 @@ export const FILMS: FilmItem[] = [
     personalVerdict:
       'Mysterious, cinematic, and slightly terrifying when someone touches your last 10% battery.',
   },
+  {
+    id: 'jenifa',
+    title: 'Jenifa',
+    year: 2008,
+    category: 'Old Nollywood',
+    directorOrCreator: 'Muhydeen S. Ayinde · Funke Akindele',
+    tagline: 'Lagos campus ambition, iconic slang, and unforgettable comedy.',
+    posterUrl: '/posters/jenifa.jpg',
+    motif: 'jenifa',
+    palette: {
+      bg: '#FFF2E8',
+      bgSecondary: '#E84A3C',
+      ink: '#2D1E2F',
+      accent: '#E84A3C',
+      highlight: '#D4EC6E',
+    },
+    personaId: 'chaotic-improviser',
+    personalVerdict:
+      'Pure "sosaiety" confidence! You stroll into the neighbor’s compound with your charger and turn a blackout into comedy gold.',
+  },
 
   // MARVEL & CULT
   {
@@ -326,6 +354,7 @@ export const FILMS: FilmItem[] = [
     category: 'Marvel & Cult',
     directorOrCreator: 'Ryan Murphy / Brad Falchuk',
     tagline: 'Red slushies, hallway showstoppers, and chaotic choir practice.',
+    posterUrl: '/posters/glee.png',
     motif: 'glee',
     palette: {
       bg: '#FFE5E0',
@@ -345,6 +374,7 @@ export const FILMS: FilmItem[] = [
     category: 'Marvel & Cult',
     directorOrCreator: 'Anthony & Joe Russo',
     tagline: 'Portals opening, final stands, and "Whatever it takes."',
+    posterUrl: '/posters/endgame.jpg',
     motif: 'endgame',
     palette: {
       bg: '#E8E2F6',
@@ -364,6 +394,7 @@ export const FILMS: FilmItem[] = [
     category: 'Marvel & Cult',
     directorOrCreator: 'James Gunn',
     tagline: 'Orange cassette walkman, starships, and cosmic mischief.',
+    posterUrl: '/posters/guardians.jpg',
     motif: 'guardians',
     palette: {
       bg: '#FFE8D2',
@@ -383,6 +414,7 @@ export const FILMS: FilmItem[] = [
     category: 'Marvel & Cult',
     directorOrCreator: 'Jon Watts',
     tagline: 'Three eras colliding on a rainy rooftop.',
+    posterUrl: '/posters/no-way-home.jpg',
     motif: 'no-way-home',
     palette: {
       bg: '#E2EAF7',
@@ -395,6 +427,26 @@ export const FILMS: FilmItem[] = [
     personalVerdict:
       'Always prepared across every timeline—you carry three backup cables and keep the squad connected.',
   },
+  {
+    id: 'harry-potter',
+    title: "Harry Potter and the Philosopher's Stone",
+    year: 2001,
+    category: 'Marvel & Cult',
+    directorOrCreator: 'Chris Columbus',
+    tagline: 'Platform 9¾, floating candles, and midnight spells.',
+    posterUrl: '/posters/harry-potter.jpg',
+    motif: 'harry-potter',
+    palette: {
+      bg: '#E3EEF8',
+      bgSecondary: '#4A77B5',
+      ink: '#2D1E2F',
+      accent: '#F3AE3D',
+      highlight: '#D4EC6E',
+    },
+    personaId: 'powerbank-cartel',
+    personalVerdict:
+      'You whisper "Lumos!" to your phone torch, pull out two fully charged power banks, and treat the blackout like Hogwarts.',
+  },
 
   // OLD HOLLYWOOD
   {
@@ -404,6 +456,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Hollywood',
     directorOrCreator: 'Michael Curtiz',
     tagline: 'Foggy runways, piano ballads, and timeless silver-screen cool.',
+    posterUrl: '/posters/casablanca.jpg',
     motif: 'casablanca',
     palette: {
       bg: '#F4EFE4',
@@ -423,6 +476,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Hollywood',
     directorOrCreator: 'Blake Edwards',
     tagline: 'Fifth Avenue mornings, dark sunglasses, and Moon River.',
+    posterUrl: '/posters/tiffany.jpg',
     motif: 'tiffany',
     palette: {
       bg: '#DDF4F1',
@@ -442,6 +496,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Hollywood',
     directorOrCreator: 'Francis Ford Coppola',
     tagline: 'Red roses, shadowed studies, and quiet family authority.',
+    posterUrl: '/posters/godfather.jpg',
     motif: 'godfather',
     palette: {
       bg: '#F2E7E4',
@@ -461,6 +516,7 @@ export const FILMS: FilmItem[] = [
     category: 'Old Hollywood',
     directorOrCreator: 'Stanley Donen & Gene Kelly',
     tagline: 'Yellow raincoats, streetlamp tap-dancing, and Technicolor joy.',
+    posterUrl: '/posters/singin-rain.jpg',
     motif: 'singin-rain',
     palette: {
       bg: '#FFF5CC',
@@ -482,6 +538,7 @@ export const FILMS: FilmItem[] = [
     category: 'Recent Blockbusters',
     directorOrCreator: 'Daniel Kwan & Daniel Scheinert',
     tagline: 'Googly eyes, laundromat portals, and glorious chaos.',
+    posterUrl: '/posters/eeaao.jpg',
     motif: 'eeaao',
     palette: {
       bg: '#FCE6F0',
@@ -501,6 +558,7 @@ export const FILMS: FilmItem[] = [
     category: 'Recent Blockbusters',
     directorOrCreator: 'Joaquim Dos Santos et al.',
     tagline: 'Halftone skylines, cassette beats, and vibrant leaps of faith.',
+    posterUrl: '/posters/spider-verse.jpg',
     motif: 'spider-verse',
     palette: {
       bg: '#FFE4EC',
@@ -520,6 +578,7 @@ export const FILMS: FilmItem[] = [
     category: 'Recent Blockbusters',
     directorOrCreator: 'Ryan Coogler',
     tagline: 'Vibranium energy, royal heritage, and futuristic pride.',
+    posterUrl: '/posters/black-panther.jpg',
     motif: 'black-panther',
     palette: {
       bg: '#EAE4F5',
@@ -539,6 +598,7 @@ export const FILMS: FilmItem[] = [
     category: 'Recent Blockbusters',
     directorOrCreator: 'Denis Villeneuve',
     tagline: 'Blazing twin suns, desert horizons, and epic survival.',
+    posterUrl: '/posters/dune-two.jpg',
     motif: 'dune-two',
     palette: {
       bg: '#FAE7CF',

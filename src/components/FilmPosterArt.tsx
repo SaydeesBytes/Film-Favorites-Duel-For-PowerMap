@@ -362,8 +362,35 @@ export const FilmPosterArt: React.FC<FilmPosterArtProps> = ({
             <circle cx="100" cy="96" r="10" fill="#FFFFFF" stroke={ink} strokeWidth="2.5" />
           </g>
         );
+
+      case 'harry-potter':
+        return (
+          <g>
+            {/* Round Glasses + Lightning Bolt + Floating Candle */}
+            <circle cx="72" cy="100" r="24" fill="none" stroke={ink} strokeWidth="4" />
+            <circle cx="128" cy="100" r="24" fill="none" stroke={ink} strokeWidth="4" />
+            <line x1="96" y1="100" x2="104" y2="100" stroke={ink} strokeWidth="4" />
+            <path d="M104 34 L88 64 L102 64 L92 84 L114 54 L100 54 Z" fill={highlight} stroke={ink} strokeWidth="2.5" />
+            <circle cx="48" cy="56" r="5" fill={highlight} />
+            <circle cx="152" cy="52" r="6" fill={highlight} />
+          </g>
+        );
+
+      case 'jenifa':
+        return (
+          <g>
+            {/* Retro Chair Silhouette + Red High Heel + Sparkles */}
+            <ellipse cx="100" cy="74" rx="28" ry="20" fill={highlight} stroke={ink} strokeWidth="3" />
+            <rect x="96" y="94" width="8" height="36" fill="#FFFFFF" stroke={ink} strokeWidth="2.5" />
+            <ellipse cx="100" cy="132" rx="28" ry="8" fill="#FFFFFF" stroke={ink} strokeWidth="2.5" />
+            <circle cx="52" cy="60" r="9" fill={accent} stroke={ink} strokeWidth="2" />
+            <circle cx="148" cy="112" r="8" fill={bgSecondary} stroke={ink} strokeWidth="2" />
+          </g>
+        );
     }
   };
+
+  const [imgError, setImgError] = React.useState(false);
 
   if (compact) {
     return (
@@ -371,37 +398,68 @@ export const FilmPosterArt: React.FC<FilmPosterArtProps> = ({
         className="w-full h-full flex items-center justify-center overflow-hidden border-2 border-[#2D1E2F]"
         style={{ backgroundColor: bg }}
       >
-        <svg viewBox="0 0 200 180" className="w-full h-full">
-          {renderMotif()}
-        </svg>
+        {!imgError ? (
+          <img
+            src={film.posterUrl}
+            alt={`${film.title} (${film.year}) poster`}
+            referrerPolicy="no-referrer"
+            onError={() => setImgError(true)}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <svg viewBox="0 0 200 180" className="w-full h-full">
+            {renderMotif()}
+          </svg>
+        )}
       </div>
     );
   }
 
   return (
     <div
-      className="relative w-full aspect-[4/3] sm:aspect-[5/4] overflow-hidden border-2 border-[#2D1E2F] flex flex-col justify-between"
+      className="relative w-full h-[240px] sm:h-[290px] overflow-hidden border-2 border-[#2D1E2F] flex flex-col justify-between"
       style={{ backgroundColor: bg }}
     >
       {/* Top Film Strip Corner Marks */}
-      <div className="flex items-center justify-between px-3 pt-2.5 text-[11px] font-tabular tracking-tight opacity-85 z-10">
+      <div className="flex items-center justify-between px-3 pt-2 pb-1 text-[11px] font-tabular tracking-tight z-10">
         <span className="font-bold" style={{ color: ink }}>
           {film.year}
         </span>
-        <span className="truncate max-w-[65%]" style={{ color: ink }}>
+        <span className="truncate max-w-[68%] font-semibold" style={{ color: ink }}>
           {film.category}
         </span>
       </div>
 
-      {/* Bespoke Illustrated Centerpiece */}
-      <div className="flex-1 flex items-center justify-center px-2">
-        <svg
-          viewBox="0 0 200 175"
-          className="w-full h-full max-h-[185px] drop-shadow-sm"
-          aria-hidden="true"
-        >
-          {renderMotif()}
-        </svg>
+      {/* Real Film Poster inside Tactile Retro Matte Frame */}
+      <div className="relative flex-1 min-h-0 px-3 pb-2.5 flex items-center justify-center">
+        {!imgError ? (
+          <div className="relative w-full h-full rounded-lg overflow-hidden border-2 border-[#2D1E2F] bg-[#2D1E2F]/90 flex items-center justify-center">
+            {/* Soft blurred poster tint fill so aspect ratios never leave harsh black bars */}
+            <img
+              src={film.posterUrl}
+              alt=""
+              aria-hidden="true"
+              referrerPolicy="no-referrer"
+              className="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-55"
+            />
+            {/* Crisp uncropped real poster */}
+            <img
+              src={film.posterUrl}
+              alt={`${film.title} (${film.year}) film poster`}
+              referrerPolicy="no-referrer"
+              onError={() => setImgError(true)}
+              className="relative z-10 max-w-full max-h-full w-auto h-full object-contain drop-shadow-md"
+            />
+          </div>
+        ) : (
+          <svg
+            viewBox="0 0 200 175"
+            className="w-full h-full max-h-[210px] drop-shadow-sm"
+            aria-hidden="true"
+          >
+            {renderMotif()}
+          </svg>
+        )}
       </div>
 
       {/* Bottom Vintage Poster Credits Bar */}
@@ -412,7 +470,9 @@ export const FilmPosterArt: React.FC<FilmPosterArtProps> = ({
         <span className="truncate font-semibold">
           Dir. {film.directorOrCreator}
         </span>
-        <span className="font-tabular shrink-0 opacity-85">REEL #{film.id.slice(0, 3).toUpperCase()}</span>
+        <span className="font-tabular shrink-0 opacity-90">
+          REEL #{film.id.slice(0, 3).toUpperCase()}
+        </span>
       </div>
     </div>
   );
