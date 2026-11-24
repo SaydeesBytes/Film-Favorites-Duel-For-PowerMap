@@ -1,0 +1,6 @@
+{
+  "name": "PowerMap Film Showdown",
+  "description": "Nostalgic indie film This-or-That booth game by PowerMap (powermap.tech) that reveals how you survive a Naija power outage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
